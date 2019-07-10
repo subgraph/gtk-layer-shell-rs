@@ -1,0 +1,42 @@
+[package]
+name = "gtk-layer-shell-sys"
+version = "0.0.1"
+links = "gtk_layer_shell"
+build = "build.rs"
+
+[lib]
+name = "gtk_layer_shell_sys"
+
+[dependencies]
+libc = "0.2"
+
+[dependencies.cairo-sys-rs]
+git = "https://github.com/gtk-rs/cairo"
+
+[dependencies.gdk-sys]
+git = "https://github.com/gtk-rs/sys"
+
+[dependencies.gdk-pixbuf-sys]
+git = "https://github.com/gtk-rs/sys"
+
+[dependencies.gio-sys]
+git = "https://github.com/gtk-rs/sys"
+
+[dependencies.glib-sys]
+git = "https://github.com/gtk-rs/sys"
+
+[dependencies.gobject-sys]
+git = "https://github.com/gtk-rs/sys"
+
+[dependencies.gtk-sys]
+git = "https://github.com/gtk-rs/sys"
+
+[build-dependencies]
+pkg-config = "0.3.7"
+
+[dev-dependencies]
+shell-words = "0.1.0"
+tempdir = "0.3"
+
+[features]
+dox = []

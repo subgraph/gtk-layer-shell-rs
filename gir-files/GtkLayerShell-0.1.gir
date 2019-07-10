@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<!-- This file was automatically generated from C sources - DO NOT EDIT!
+To affect the contents of this file, edit the original C definitions,
+and/or use gtk-doc annotations.  -->
+<repository version="1.2"
+            xmlns="http://www.gtk.org/introspection/core/1.0"
+            xmlns:c="http://www.gtk.org/introspection/c/1.0"
+            xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+  <include name="Gtk" version="3.0"/>
+  <package name="gtk-layer-shell-0"/>
+  <c:include name="gtk-layer-shell/gtk-layer-shell.h"/>
+  <namespace name="GtkLayerShell"
+             version="0.1"
+             shared-library="libgtk-layer-shell.so"
+             c:identifier-prefixes="GtkLayerShell"
+             c:symbol-prefixes="gtk_layer">
+    <enumeration name="Edge" c:type="GtkLayerShellEdge">
+      <member name="left" value="0" c:identifier="GTK_LAYER_SHELL_EDGE_LEFT">
+      </member>
+      <member name="right" value="1" c:identifier="GTK_LAYER_SHELL_EDGE_RIGHT">
+      </member>
+      <member name="top" value="2" c:identifier="GTK_LAYER_SHELL_EDGE_TOP">
+      </member>
+      <member name="bottom"
+              value="3"
+              c:identifier="GTK_LAYER_SHELL_EDGE_BOTTOM">
+      </member>
+      <member name="entry_number"
+              value="4"
+              c:identifier="GTK_LAYER_SHELL_EDGE_ENTRY_NUMBER">
+      </member>
+    </enumeration>
+    <enumeration name="Layer" c:type="GtkLayerShellLayer">
+      <member name="background"
+              value="0"
+              c:identifier="GTK_LAYER_SHELL_LAYER_BACKGROUND">
+      </member>
+      <member name="bottom"
+              value="1"
+              c:identifier="GTK_LAYER_SHELL_LAYER_BOTTOM">
+      </member>
+      <member name="top" value="2" c:identifier="GTK_LAYER_SHELL_LAYER_TOP">
+      </member>
+      <member name="overlay"
+              value="3"
+              c:identifier="GTK_LAYER_SHELL_LAYER_OVERLAY">
+      </member>
+      <member name="entry_number"
+              value="4"
+              c:identifier="GTK_LAYER_SHELL_LAYER_ENTRY_NUMBER">
+      </member>
+    </enumeration>
+    <function name="auto_exclusive_zone_enable"
+              c:identifier="gtk_layer_auto_exclusive_zone_enable">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="init_for_window" c:identifier="gtk_layer_init_for_window">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_anchor" c:identifier="gtk_layer_set_anchor">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="edge" transfer-ownership="none">
+          <type name="Edge" c:type="GtkLayerShellEdge"/>
+        </parameter>
+        <parameter name="anchor_to_edge" transfer-ownership="none">
+          <type name="gboolean" c:type="gboolean"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_exclusive_zone"
+              c:identifier="gtk_layer_set_exclusive_zone">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="exclusive_zone" transfer-ownership="none">
+          <type name="gint" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_keyboard_interactivity"
+              c:identifier="gtk_layer_set_keyboard_interactivity">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="interacitvity" transfer-ownership="none">
+          <type name="gboolean" c:type="gboolean"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_layer" c:identifier="gtk_layer_set_layer">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="layer" transfer-ownership="none">
+          <type name="Layer" c:type="GtkLayerShellLayer"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_margin" c:identifier="gtk_layer_set_margin">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="edge" transfer-ownership="none">
+          <type name="Edge" c:type="GtkLayerShellEdge"/>
+        </parameter>
+        <parameter name="margin_size" transfer-ownership="none">
+          <type name="gint" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_monitor" c:identifier="gtk_layer_set_monitor">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="monitor" transfer-ownership="none">
+          <type name="Gdk.Monitor" c:type="GdkMonitor*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_namespace" c:identifier="gtk_layer_set_namespace">
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="name_space" transfer-ownership="none">
+          <type name="utf8" c:type="const char*"/>
+        </parameter>
+      </parameters>
+    </function>
+  </namespace>
+</repository>

@@ -1,0 +1,77 @@
+[options]
+girs_dir = "./gir-files"
+library = "GtkLayerShell"
+version = "0.1"
+min_cfg_version = "0.1"
+target_path = "."
+work_mode = "normal"
+generate_safety_asserts = true
+deprecate_by_min_version = true
+single_version_file = true
+
+external_libraries = [
+    "Gdk",
+    "Gtk",
+]
+
+generate = [
+    "GtkLayerShell.Layer",
+    "GtkLayerShell.Edge"
+]
+
+manual = [
+    "Gtk.Window",
+    "Gdk.Monitor"
+]
+
+[[object]]
+name = "GtkLayerShell.*"
+status = "generate"
+    [[object.function]]
+    name = "auto_exclusive_zone_enable"
+        [[object.function.parameter]]
+        name = "window"
+    [[object.function]]
+    name = "init_for_window"
+        [[object.function.parameter]]
+        name = "window"
+    [[object.function]]
+    name = "set_anchor"
+        [[object.function.parameter]]
+        name = "window"
+        [[object.function.parameter]]
+        name = "edge"
+        [[object.function.parameter]]
+        name = "anchor_to_edge"
+    [[object.function]]
+    name = "set_exclusive_zone"
+        [[object.function.parameter]]
+        name = "window"
+        [[object.function.parameter]]
+        name = "exclusive_zone"
+    [[object.function]]
+    name = "set_keyboard_interactivity"
+    [[object.function]]
+    name = "set_layer"
+        [[object.function.parameter]]
+        name = "window"
+        [[object.function.parameter]]
+        name = "layer"
+    [[object.function]]
+    name = "set_margin"
+        [[object.function.parameter]]
+        name = "window"
+        [[object.function.parameter]]
+        name = "edge"
+        [[object.function.parameter]]
+        name = "margin_size"
+    [[object.function]]
+    name = "set_monitor"
+    ignore = true
+    [[object.function]]
+    name = "set_namespace"
+        [[object.function.parameter]]
+        name = "window"
+        [[object.function.parameter]]
+        name = "name_space"
+
