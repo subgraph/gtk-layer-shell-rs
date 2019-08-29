@@ -28,14 +28,14 @@ fn activate(application: &gtk::Application) {
 
     // The margins are the gaps around the window's edges
     // Margins and anchors can be set like this...
-    // NOTE: example modified since setting anchors/margins multiple times
-    // seems to break auto_exclusive_zone_enable
+    gtk_layer_shell::set_margin(&window, gtk_layer_shell::Edge::Left, 40);
+    gtk_layer_shell::set_margin(&window, gtk_layer_shell::Edge::Right, 40);
     gtk_layer_shell::set_margin(&window, gtk_layer_shell::Edge::Top, 20);
-
     // ... or like this
     // Anchors are if the window is pinned to each edge of the output
     gtk_layer_shell::set_anchor(&window, gtk_layer_shell::Edge::Left, true);
     gtk_layer_shell::set_anchor(&window, gtk_layer_shell::Edge::Right, true);
+    gtk_layer_shell::set_anchor(&window, gtk_layer_shell::Edge::Top, false);
     gtk_layer_shell::set_anchor(&window, gtk_layer_shell::Edge::Bottom, true);
 
     // Set up a widget
