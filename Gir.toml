@@ -67,7 +67,10 @@ status = "generate"
         name = "margin_size"
     [[object.function]]
     name = "set_monitor"
-    ignore = true
+        [[object.function.parameter]]
+        name = "window"
+        [[object.function.parameter]]
+        name = "monitor"
     [[object.function]]
     name = "set_namespace"
         [[object.function.parameter]]

@@ -4,6 +4,7 @@
 
 use crate::auto::enums::Edge;
 use crate::auto::enums::Layer;
+use gdk;
 use glib::object::IsA;
 use glib::translate::*;
 use gtk;
@@ -68,6 +69,16 @@ pub fn set_margin<P: IsA<gtk::Window>>(window: &P, edge: Edge, margin_size: i32)
             window.as_ref().to_glib_none().0,
             edge.to_glib(),
             margin_size,
+        );
+    }
+}
+
+pub fn set_monitor<P: IsA<gtk::Window>>(window: &P, monitor: &gdk::Monitor) {
+    assert_initialized_main_thread!();
+    unsafe {
+        gtk_layer_shell_sys::gtk_layer_set_monitor(
+            window.as_ref().to_glib_none().0,
+            monitor.to_glib_none().0,
         );
     }
 }

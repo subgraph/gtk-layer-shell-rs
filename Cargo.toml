@@ -7,6 +7,7 @@ edition = "2018"
 [dependencies]
 libc = "0.2"
 bitflags = "1.0"
+gdk = { git = "https://github.com/gtk-rs/gdk", features = ["v3_22"] }
 
 [dependencies.gtk-layer-shell-sys]
 path = "./gtk-layer-shell-sys"
@@ -16,9 +17,6 @@ git = "https://github.com/gtk-rs/gtk"
 
 [dependencies.gtk-sys]
 git = "https://github.com/gtk-rs/sys"
-
-[dependencies.gdk]
-git = "https://github.com/gtk-rs/gdk"
 
 [dependencies.gio]
 git = "https://github.com/gtk-rs/gio"

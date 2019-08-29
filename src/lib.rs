@@ -5,8 +5,8 @@ extern crate gdk;
 extern crate glib;
 extern crate glib_sys;
 extern crate gtk;
-extern crate gtk_sys;
 extern crate gtk_layer_shell_sys;
+extern crate gtk_sys;
 
 macro_rules! assert_initialized_main_thread {
     () => {
@@ -27,4 +27,3 @@ macro_rules! skip_assert_initialized {
 mod auto;
 pub use auto::functions::*;
 pub use auto::*;
-
