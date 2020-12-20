@@ -3,15 +3,21 @@
 // DO NOT EDIT
 
 use glib::translate::*;
-use gtk_layer_shell_sys;
 use std::fmt;
 
 #[derive(Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Clone, Copy)]
+#[non_exhaustive]
+#[doc(alias = "GtkLayerShellEdge")]
 pub enum Edge {
+    #[doc(alias = "GTK_LAYER_SHELL_EDGE_LEFT")]
     Left,
+    #[doc(alias = "GTK_LAYER_SHELL_EDGE_RIGHT")]
     Right,
+    #[doc(alias = "GTK_LAYER_SHELL_EDGE_TOP")]
     Top,
+    #[doc(alias = "GTK_LAYER_SHELL_EDGE_BOTTOM")]
     Bottom,
+    #[doc(alias = "GTK_LAYER_SHELL_EDGE_ENTRY_NUMBER")]
     EntryNumber,
     #[doc(hidden)]
     __Unknown(i32),
@@ -36,23 +42,23 @@ impl fmt::Display for Edge {
 
 #[doc(hidden)]
 impl ToGlib for Edge {
-    type GlibType = gtk_layer_shell_sys::GtkLayerShellEdge;
+    type GlibType = ffi::GtkLayerShellEdge;
 
-    fn to_glib(&self) -> gtk_layer_shell_sys::GtkLayerShellEdge {
+    fn to_glib(&self) -> ffi::GtkLayerShellEdge {
         match *self {
-            Edge::Left => gtk_layer_shell_sys::GTK_LAYER_SHELL_EDGE_LEFT,
-            Edge::Right => gtk_layer_shell_sys::GTK_LAYER_SHELL_EDGE_RIGHT,
-            Edge::Top => gtk_layer_shell_sys::GTK_LAYER_SHELL_EDGE_TOP,
-            Edge::Bottom => gtk_layer_shell_sys::GTK_LAYER_SHELL_EDGE_BOTTOM,
-            Edge::EntryNumber => gtk_layer_shell_sys::GTK_LAYER_SHELL_EDGE_ENTRY_NUMBER,
+            Edge::Left => ffi::GTK_LAYER_SHELL_EDGE_LEFT,
+            Edge::Right => ffi::GTK_LAYER_SHELL_EDGE_RIGHT,
+            Edge::Top => ffi::GTK_LAYER_SHELL_EDGE_TOP,
+            Edge::Bottom => ffi::GTK_LAYER_SHELL_EDGE_BOTTOM,
+            Edge::EntryNumber => ffi::GTK_LAYER_SHELL_EDGE_ENTRY_NUMBER,
             Edge::__Unknown(value) => value,
         }
     }
 }
 
 #[doc(hidden)]
-impl FromGlib<gtk_layer_shell_sys::GtkLayerShellEdge> for Edge {
-    fn from_glib(value: gtk_layer_shell_sys::GtkLayerShellEdge) -> Self {
+impl FromGlib<ffi::GtkLayerShellEdge> for Edge {
+    unsafe fn from_glib(value: ffi::GtkLayerShellEdge) -> Self {
         skip_assert_initialized!();
         match value {
             0 => Edge::Left,
@@ -66,11 +72,18 @@ impl FromGlib<gtk_layer_shell_sys::GtkLayerShellEdge> for Edge {
 }
 
 #[derive(Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Clone, Copy)]
+#[non_exhaustive]
+#[doc(alias = "GtkLayerShellLayer")]
 pub enum Layer {
+    #[doc(alias = "GTK_LAYER_SHELL_LAYER_BACKGROUND")]
     Background,
+    #[doc(alias = "GTK_LAYER_SHELL_LAYER_BOTTOM")]
     Bottom,
+    #[doc(alias = "GTK_LAYER_SHELL_LAYER_TOP")]
     Top,
+    #[doc(alias = "GTK_LAYER_SHELL_LAYER_OVERLAY")]
     Overlay,
+    #[doc(alias = "GTK_LAYER_SHELL_LAYER_ENTRY_NUMBER")]
     EntryNumber,
     #[doc(hidden)]
     __Unknown(i32),
@@ -95,23 +108,23 @@ impl fmt::Display for Layer {
 
 #[doc(hidden)]
 impl ToGlib for Layer {
-    type GlibType = gtk_layer_shell_sys::GtkLayerShellLayer;
+    type GlibType = ffi::GtkLayerShellLayer;
 
-    fn to_glib(&self) -> gtk_layer_shell_sys::GtkLayerShellLayer {
+    fn to_glib(&self) -> ffi::GtkLayerShellLayer {
         match *self {
-            Layer::Background => gtk_layer_shell_sys::GTK_LAYER_SHELL_LAYER_BACKGROUND,
-            Layer::Bottom => gtk_layer_shell_sys::GTK_LAYER_SHELL_LAYER_BOTTOM,
-            Layer::Top => gtk_layer_shell_sys::GTK_LAYER_SHELL_LAYER_TOP,
-            Layer::Overlay => gtk_layer_shell_sys::GTK_LAYER_SHELL_LAYER_OVERLAY,
-            Layer::EntryNumber => gtk_layer_shell_sys::GTK_LAYER_SHELL_LAYER_ENTRY_NUMBER,
+            Layer::Background => ffi::GTK_LAYER_SHELL_LAYER_BACKGROUND,
+            Layer::Bottom => ffi::GTK_LAYER_SHELL_LAYER_BOTTOM,
+            Layer::Top => ffi::GTK_LAYER_SHELL_LAYER_TOP,
+            Layer::Overlay => ffi::GTK_LAYER_SHELL_LAYER_OVERLAY,
+            Layer::EntryNumber => ffi::GTK_LAYER_SHELL_LAYER_ENTRY_NUMBER,
             Layer::__Unknown(value) => value,
         }
     }
 }
 
 #[doc(hidden)]
-impl FromGlib<gtk_layer_shell_sys::GtkLayerShellLayer> for Layer {
-    fn from_glib(value: gtk_layer_shell_sys::GtkLayerShellLayer) -> Self {
+impl FromGlib<ffi::GtkLayerShellLayer> for Layer {
+    unsafe fn from_glib(value: ffi::GtkLayerShellLayer) -> Self {
         skip_assert_initialized!();
         match value {
             0 => Layer::Background,
