@@ -5,8 +5,6 @@ extern crate gdk;
 extern crate glib;
 extern crate glib_sys;
 extern crate gtk;
-extern crate gtk_layer_shell_sys;
-extern crate gtk_sys;
 
 macro_rules! assert_initialized_main_thread {
     () => {

@@ -3,6 +3,8 @@ library = "GtkLayerShell"
 version = "0.1"
 target_path = "."
 min_cfg_version = "0.1"
+work_mode = "sys"
+girs_dir = "../gir-files"
 
 external_libraries = [
     "Cairo",
