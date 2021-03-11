@@ -4,6 +4,10 @@ This repository provides Rust bindings for the https://github.com/wmww/gtk-layer
 library. To use these bindings, it is assumed that you have built and installed
 `gtk-layer-shell` and its dependencies.
 
+Note: there are other bindings out there that may be more actively maintained. This
+version is mostly for internal use. It is updated once and awhile as needed but
+other versions may work better for you.
+
 ## Usage
 
 Examples can be found in the `examples/` directory. To run an example:
