@@ -5,8 +5,6 @@ extern crate gtk_layer_shell_rs as gtk_layer_shell;
 use gio::prelude::*;
 use gtk::prelude::*;
 
-use std::env::args;
-
 // This is analogous to:
 // https://github.com/wmww/gtk-layer-shell/blob/master/example/example.c
 fn activate(application: &gtk::Application) {
@@ -48,12 +46,11 @@ fn activate(application: &gtk::Application) {
 
 fn main() {
     let application =
-        gtk::Application::new(Some("com.subgraph.gtk-layer-example"), Default::default())
-            .expect("Initialization failed...");
+        gtk::Application::new(Some("com.subgraph.gtk-layer-example"), Default::default());
 
     application.connect_activate(|app| {
         activate(app);
     });
 
-    application.run(&args().collect::<Vec<_>>());
+    application.run();
 }

@@ -24,7 +24,7 @@ features = ["v3_22"]
 [dependencies.gtk]
 git = "https://github.com/gtk-rs/gtk-rs"
 version = "0.13.0"
-features = ["v3_16"]
+features = ["v3_20"]
 
 [dependencies.gtk-sys]
 git = "https://github.com/gtk-rs/gtk-rs"
